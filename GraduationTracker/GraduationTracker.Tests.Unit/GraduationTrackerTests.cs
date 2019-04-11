@@ -9,7 +9,7 @@ namespace GraduationTracker.Tests.Unit
     public class GraduationTrackerTests
     {
         [TestMethod]
-        public void TestHasCredits()
+        public void HasGraduated_HasCredits_ReturnTrue()
         {
             var tracker = new GraduationTracker();
 
@@ -82,6 +82,21 @@ namespace GraduationTracker.Tests.Unit
             Assert.IsTrue(graduated.Any());
 
         }
+        
+        [TestMethod]
+        public void RepositoryGetStudent_ReturnTrue()
+        {
+            var repository = Repository.GetStudent(1);
+            var student = new Student();
+            student = repository;
+
+            Assert.IsTrue(student.Equals(repository));
+
+        }
+        //Not sure what exactly this code is doing.
+        //Test for GraduationTracker is implemented. 
+        //Another method just to test GetStudent() method is implemented
+        //Method names have been changed to follow naming convention
 
 
     }
